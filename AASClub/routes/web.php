@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//Default
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,9 +27,19 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//User setup
 
-Route::group(['middleware' => ['auth','admin']], function(){
-    Route::get('/admin-panel', function(){
+
+
+
+//Admin Dashboard setup
+Route::group(['middleware' => ['auth', 'admin']], function(){
+    
+    Route::get('/dashboard', function(){
         return view('admin.dashboard');
     });
+
 });
+
+
+
