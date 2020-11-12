@@ -39,7 +39,6 @@ Route::group(['middleware' => ['auth', 'admin']], function(){
         return view('admin.dashboard');
     });
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 });
 
