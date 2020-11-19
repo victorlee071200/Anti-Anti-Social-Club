@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,27 +24,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-//User setup
-
-
-
-
-//Admin Dashboard setup
-Route::group(['middleware' => ['auth', 'admin']], function(){
-    
-    Route::get('/dashboard', function(){
-        return view('admin.dashboard');
-    });
-
-    //https://github.com/victorleezhesheng/Anti-Anti-Social-Club.git
-
-
-});
 
 
 
