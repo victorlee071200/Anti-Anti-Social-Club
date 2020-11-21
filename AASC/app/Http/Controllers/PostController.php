@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth'])->only(['store', 'destroy']);
+
+    }
+
     public function index()
     {
         // $posts = Post::orderBy('created_at', 'desc')->with('user', 'likes')->paginate(20); //return all items in a collection
@@ -15,6 +21,11 @@ class PostController extends Controller
         return view('posts.index', ['posts' => $posts]);
         
         return view('posts.index');
+    }
+
+    public function show(Post $post)
+    {
+        return view('posts.show', ['post' => $post]);
     }
 
     public function store(Request $request)
@@ -43,4 +54,6 @@ class PostController extends Controller
 
         return back();
     }
+
+
 }
