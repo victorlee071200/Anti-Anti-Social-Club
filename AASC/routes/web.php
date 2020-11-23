@@ -5,6 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\UserPostController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RouteTestController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\RegisterController;
@@ -46,3 +47,10 @@ Route::delete("/posts/{post}/likes", [PostLikeController::class, 'destroy'])->na
 //User Post Feature
 Route::get('/users/{user:username}/posts', [UserPostController::class, 'index'])->name('users.posts');
 
+//Test case
+Route::get('/test', function(){
+    return view('home');
+});
+
+//Route Response Tester
+Route::post('/rrtester', [RouteTestController::class, 'index']);
