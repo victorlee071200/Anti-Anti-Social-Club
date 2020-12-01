@@ -2,6 +2,7 @@
 # Get Started with PHP Laravel
 ## Laravel
 ### **Steps to Start Laravel**
+Step 0: Make sure you have installed composer (application level package manager for PHP programming), nodeJs, and XAMPP.
 
 Step 1: Clone the Project
 
