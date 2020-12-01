@@ -2,6 +2,7 @@
 # Get Started with PHP Laravel
 ## Laravel
 ### **Steps to Start Laravel**
+(**Make sure you have done step 0 before proceeding to step 1**)
 Step 0: Make sure you have installed composer (application level package manager for PHP programming), nodeJs, and XAMPP.
 
 Step 1: Clone the Project
@@ -9,7 +10,7 @@ Step 1: Clone the Project
 Step 2: Go to the aasc directory
 * `cd aasc`
 
-Step 3: Install composer (**if composer is already installed, skip to step 4**)
+Step 3: Install composer 
 * `composer install`
 
 Step 4: Check if composer is up to date
