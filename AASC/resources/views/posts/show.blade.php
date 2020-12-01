@@ -6,6 +6,5 @@
             <x-post :post="$post"/>
         </div>
     </div>
-
     
 @endsection
