@@ -39,3 +39,24 @@ Step 5: Generate a .env file for laravel
 * `php artisan serve`
 
 
+# Get Started with Continuous Integration (CI)
+
+## Jenkins
+### **Steps to Install Jenkins**
+
+Step 1: Download Jenkins war file - https://jenkins.io/
+
+Step 2: Place the war file into any location on your system
+
+Step 3: goto command prompt (windows) | terminal (mac)
+   - goto folder where jenkins.war is
+   - java -jar jenkins.war
+
+Step 4: goto browser - http://localhost:8080 (Jenkins window should show up)
+
+Step 5: install required plugins
+
+Step 6: get started with Jenkins
+
+**********
+
